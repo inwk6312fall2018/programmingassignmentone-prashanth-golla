@@ -1,8 +1,10 @@
 fin=open('running-config.cfg')
+#creating a file result.txt and assiging to write mode
 fin1=open('result.txt','w+')
 for line in fin:
   line=line.strip()
   line=line.split()
+#checks if the first element is security-level
   if(line[0]=='security-level'):
     line[1]='10'
     fin1.write(str(line[1]))
